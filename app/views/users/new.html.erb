@@ -1,5 +1,6 @@
 <h1>New User</h1>
 <form action="create" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="email">Email:</label><br/>
   <input type="email" name="email" id="email" placeholder="Email"><br/><br/>
   <label for="username">Username:</label><br/>
