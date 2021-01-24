@@ -39,4 +39,4 @@
 yarn-debug.log*
 .yarn-integrity
 
-app/views/users/create.html.erb
+app/views/users/__create.html.erb
