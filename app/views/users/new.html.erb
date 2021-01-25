@@ -34,13 +34,11 @@
 <!-- Railsy-er Forms with #form_for -->
 
 <%= form_for @user, url: {action: "create"} do |f| %>
-  Email:<br/>
-  <%= f.email_field :email %><br/><br/>
-  Username:<br/>
+  <%= f.label(:email) %><br/>
+  <%= f.email_field(:email, placeholder: "example@example.com") %><br/><br/>
+  <%= f.label(:username, "Your user name here:") %><br/>
   <%= f.text_field :username %><br/><br/>
-  Password:<br/>
+  <%= f.label(:password) %><br/>
   <%= f.password_field :password %><br/><br/>
-  
   <%= f.submit "Create" %>
 <% end %>
-
