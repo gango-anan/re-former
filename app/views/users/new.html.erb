@@ -1,20 +1,8 @@
 <h1>New User</h1>
+
 <%
 =begin%>
  <form action="create" method="post" accept-charset="UTF-8">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label for="email">Email:</label><br/>
-  <input type="email" name="email" id="email" placeholder="Email"><br/><br/>
-  <label for="username">Username:</label><br/>
-  <input type="text" name="username" id="username" placeholder="Username"><br/><br/>
-  <label for="password">Password:</label><br/>
-  <input type="password" name="password" id="password"><br/><br/>
-  <input type="submit" value="Submit">
-</form> 
-<%
-=end%>
-
-<form action="create" method="post" accept-charset="UTF-8">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="email">Email:</label><br/>
   <input type="email" name="user[email]" id="email" placeholder="Email"><br/><br/>
@@ -23,4 +11,16 @@
   <label for="password">Password:</label><br/>
   <input type="password" name="user[password]" id="password"><br/><br/>
   <input type="submit" value="Submit">
-</form>
+</form> 
+<%
+=end%>
+
+<%= form_tag 'create' do %>
+  <%= label_tag(:email, "Email:") %><br/>
+  <%= email_field(:user, :email, placeholder: "email") %><br/><br/>
+  <%= label_tag(:username, "Username:") %><br/>
+  <%= text_field(:user, :username, placeholder: "username") %><br/><br/>
+  <%= label_tag(:password, "Password:") %><br/>
+  <%= password_field_tag(:user, :password) %><br/><br/>
+  <%= submit_tag("Submit") %>
+<% end %>
