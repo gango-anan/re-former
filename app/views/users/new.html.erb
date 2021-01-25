@@ -33,7 +33,7 @@
 
 <!-- Railsy-er Forms with #form_for -->
 
-<%= form_for @user, url: {action: "create"} do |f| %>
+<%= form_for(@user, url: users_path) do |f| %>
   <%= f.label(:email) %><br/>
   <%= f.email_field(:email, placeholder: "example@example.com") %><br/><br/>
   <%= f.label(:username, "Your user name here:") %><br/>
