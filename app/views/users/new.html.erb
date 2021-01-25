@@ -1,5 +1,6 @@
 <h1>New User</h1>
 
+<!-- HTML Form -->
 <%
 =begin%>
  <form action="create" method="post" accept-charset="UTF-8">
@@ -10,17 +11,36 @@
   <input type="text" name="user[username]" id="username" placeholder="Username"><br/><br/>
   <label for="password">Password:</label><br/>
   <input type="password" name="user[password]" id="password"><br/><br/>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Create">
 </form> 
 <%
 =end%>
 
-<%= form_tag 'create' do %>
+<!-- Railsy Forms with #form_tag -->
+<%
+=begin%>
+ <%= form_tag 'create' do %>
   <%= label_tag(:email, "Email:") %><br/>
   <%= email_field(:user, :email, placeholder: "email") %><br/><br/>
   <%= label_tag(:username, "Username:") %><br/>
   <%= text_field(:user, :username, placeholder: "username") %><br/><br/>
   <%= label_tag(:password, "Password:") %><br/>
   <%= password_field_tag(:user, :password) %><br/><br/>
-  <%= submit_tag("Submit") %>
+  <%= submit_tag("Create") %>
+<% end %> 
+<%
+=end%>
+
+<!-- Railsy-er Forms with #form_for -->
+
+<%= form_for @user, url: {action: "create"} do |f| %>
+  Email:<br/>
+  <%= f.email_field :email %><br/><br/>
+  Username:<br/>
+  <%= f.text_field :username %><br/><br/>
+  Password:<br/>
+  <%= f.password_field :password %><br/><br/>
+  
+  <%= f.submit "Create" %>
 <% end %>
+
