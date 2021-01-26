@@ -2,7 +2,7 @@
 
 # Re-Former
 
-This is a project which test the ability to create forms using the normal HTML way(Bare Metal) and using Rails form Helpers.
+This is a project which tests the ability to create forms using the normal HTML way(Bare Metal) and using Rails form Helpers.
 
 ## Built With
 
@@ -14,7 +14,7 @@ This is a project which test the ability to create forms using the normal HTML w
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-Make sure you have the most recent versions of Ruby, Node.js, and Yarn installed on your system.
+Make sure you have the most recent version of Ruby, Node.js, and Yarn installed on your system.
 
 ### Setup
 Clone the repo from the following URL(https://github.com/gango-anan/re-former.git)
@@ -25,9 +25,9 @@ gem install rails
 - Open the the project folder from the terminal.
 - Run the command: rails server
 - Access the Create new user page from your browser by typing in: localhost:3000/users/new
-- Create a new user by fill in the form and clicking on the create button.
-- To edit a user, for example the second user yiu created, type in your browser: localhost:3000/users/2/edit
-- Update the user details you want to change and click on the Edit button to submit your changes.
+- Create a new user by filling in the form and clicking on the Create button.
+- To edit a user's details, for example, the second user user you created, type in your browser: localhost:3000/users/2/edit
+- Update the user's details you want to change and click on the Edit button to submit your changes.
 
 ## Author
 
@@ -54,5 +54,5 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT]( ) licensed.
+This project is [MIT](https://github.com/gango-anan/re-former/blob/form-feature/LICENSE) licensed.
 
