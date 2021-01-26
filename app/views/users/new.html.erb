@@ -1,6 +1,7 @@
 <h1>New User</h1>
 
 <!-- HTML Form -->
+
 <%
 =begin%>
  <form action="create" method="post" accept-charset="UTF-8">
@@ -12,14 +13,14 @@
   <label for="password">Password:</label><br/>
   <input type="password" name="user[password]" id="password"><br/><br/>
   <input type="submit" value="Create">
-</form> 
+</form>  
 <%
 =end%>
 
 <!-- Railsy Forms with #form_tag -->
-<%
+ <%
 =begin%>
- <%= form_tag 'create' do %>
+ <%= form_tag(users_path) do %>
   <%= label_tag(:email, "Email:") %><br/>
   <%= email_field(:user, :email, placeholder: "email") %><br/><br/>
   <%= label_tag(:username, "Username:") %><br/>
@@ -27,7 +28,7 @@
   <%= label_tag(:password, "Password:") %><br/>
   <%= password_field_tag(:user, :password) %><br/><br/>
   <%= submit_tag("Create") %>
-<% end %> 
+<% end %>  
 <%
 =end%>
 
@@ -41,4 +42,5 @@
   <%= f.label(:password) %><br/>
   <%= f.password_field :password %><br/><br/>
   <%= f.submit "Create" %>
-<% end %>
+<% end %> 
+
