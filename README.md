@@ -26,7 +26,7 @@ gem install rails
 - Run the command: rails server
 - Access the Create new user page from your browser by typing in: localhost:3000/users/new
 - Create a new user by filling in the form and clicking on the Create button.
-- To edit a user's details, for example, the second user user you created, type in your browser: localhost:3000/users/2/edit
+- To edit a user's details, for example, the second user you created, type in your browser: localhost:3000/users/2/edit
 - Update the user's details you want to change and click on the Edit button to submit your changes.
 
 ## Author
@@ -49,8 +49,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Thanks to TheOdinProject for the great materials they provide.
-- Thanks to the rails guide team for a wonderful job of providing the great rails guides out there.
+- Thanks to TheOdinProject for the great learning materials they provided for this project.
+- Thanks to the rails guide team for a wonderful job of providing the rails guides to get one up and running.
 
 ## 📝 License
 
