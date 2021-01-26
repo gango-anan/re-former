@@ -1,2 +1,46 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>New User</h1>
+
+<!-- HTML Form -->
+
+<%
+=begin%>
+ <form action="users_path" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="email">Email:</label><br/>
+  <input type="email" name="user[email]" id="email" placeholder="Email"><br/><br/>
+  <label for="username">Username:</label><br/>
+  <input type="text" name="user[username]" id="username" placeholder="Username"><br/><br/>
+  <label for="password">Password:</label><br/>
+  <input type="password" name="user[password]" id="password"><br/><br/>
+  <input type="submit" value="Create">
+</form>  
+<%
+=end%>
+
+<!-- Railsy Forms with #form_tag -->
+ <%
+=begin%>
+ <%= form_tag(users_path) do %>
+  <%= label_tag(:email, "Email:") %><br/>
+  <%= email_field(:user, :email, placeholder: "email") %><br/><br/>
+  <%= label_tag(:username, "Username:") %><br/>
+  <%= text_field(:user, :username, placeholder: "username") %><br/><br/>
+  <%= label_tag(:password, "Password:") %><br/>
+  <%= password_field_tag(:user, :password) %><br/><br/>
+  <%= submit_tag("Create") %>
+<% end %>  
+<%
+=end%>
+
+<!-- Railsy-er Forms with #form_for -->
+
+<%= form_for(@user, url: users_path) do |f| %>
+  <%= f.label(:email) %><br/>
+  <%= f.email_field(:email, placeholder: "example@example.com") %><br/><br/>
+  <%= f.label(:username, "Your user name here:") %><br/>
+  <%= f.text_field :username %><br/><br/>
+  <%= f.label(:password) %><br/>
+  <%= f.password_field :password %><br/><br/>
+  <%= f.submit "Create" %>
+<% end %> 
+
